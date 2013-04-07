@@ -14,15 +14,15 @@ describe "StaticPages" do
     describe "Contact page" do
       before { visit contact_path }
       it { page.should have_selector('h1', text: "Contact") }
-      it { page.should have_selector('title', text: full_title('Contact')) }
-      it { page.should have_selector('title', text: "| Contact") }
+      it { page.should have_selector("title", text: full_title('Contact')) }
+      it { page.should have_selector("title", text: "| Contact") }
     end
 
     #page about the help page
     describe "Help page" do
       before { visit help_path }
       it { page.should have_selector('h1', text: "Help") }
-      it { page.should have_selector('title', text: full_title('Help')) }
+      it { page.should have_selector("title", text: full_title('Help')) }
       it { page.should have_selector("title", text: "| Help") }
     end
 
